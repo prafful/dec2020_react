@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Basics</title>
+</head>
+<body>
+    <h1>HTML5 Basics</h1>
+    <ol>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+        <li>Live reload works!!!!</li>
+    </ol>
+    <h2>New features of HTML5:</h2>
+    <ol>
+        <li>New Semantic Elements</li>
+        <li>Support for new form elements and attributes</li>
+        <li>Media - video and audio!!!!</li>
+        <li>Support for Canvas</li>
+        <li>Support for SVG Content</li>
+        <li>Support for HTML5 API</li>
+
+    </ol>
+    <h2>HTML5 API:</h2>
+    <ol>
+        <li>Webstorage API </li>
+        <li>Geolocation API</li>
+        <li>Webworkers API</li>
+        <li>Cache API</li>
+        <li>SSE (Server Sent Events)</li>
+        <li>Drag and Drop API</li>
+    </ol>
+    <form action="" >
+        <input type="text" name="" id="" readonly value="prafful daga">
+        <input type="color" name="" id="">
+        <input type="date" name="" id="" required>
+        <input type="email" name="" id="" required>
+        <input type="month" name="" id="">
+        <input type="number" name="" id="" max="100" min="50" step="5">
+        <button>Add</button>
+        <input type="range" name="" id="">
+        <progress></progress>
+        <a href="">Link</a>
+        <input type=date step=7 min=2014-09-08> - Monday only
+        <input type=time min=9:00 max=17:00 step=900> - 15m increments
+        <input type=week step=2 min=2014-W30>
+    </form>
+    <hr>
+    <video id="bunny" autoplay muted loop controls>
+        <source src="video/bunny.mp4">
+        <source src="video/bunny.mov"> 
+        <source src="video/bunny.ogv">   
+    </video>
+    <br>
+    <button onclick="playBunny()">Play</button>
+    &nbsp;
+    <button onclick="pauseBunny()">Pause</button>
+    
+
+    <script>
+        var bunnyref = document.getElementById('bunny')
+
+        function playBunny(){
+            bunnyref.play()
+        }
+
+        function pauseBunny(){
+            bunnyref.pause()
+        }
+
+
+    </script>
+</body>
+</html>

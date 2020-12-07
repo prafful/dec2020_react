@@ -1,0 +1,28 @@
+https://www.w3schools.com/
+https://www.kirupa.com/react/index.htm
+
+https://www.youtube.com/playlist?list=PL41lfR-6DnOruqMacTfff1zrEcqtmm7Fv
+
+https://www.youtube.com/playlist?list=PL4cUxeGkcC9ivBf_eKCPIAYXWzLlPAm6G
+
+Many Mini Projects - https://www.youtube.com/playlist?list=PLillGF-RfqbZTASqIqdvm1R5mLrQq79CU
+
+Why do you need Symantic elements?
+
+https://webflow.com/blog/html5-semantic-elements-and-webflow-the-essential-guide#:~:text=Semantic%20elements'%20benefits%20for%20designers,to%20choose%20titles'%20hierarchy%20properly.
+
+https://dev.to/samkiroko/html5-semantic-tags-why-you-need-to-use-them-2872
+
+https://www.freecodecamp.org/news/semantic-html5-elements/
+
+https://www.inboundnow.com/html5-semantic-elements-mean-seo/
+
+New HTML5 input types:
+
+https://www.wufoo.com/html5/
+
+HTML5 Video Element:
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
+
+HTML5 APi Examples:
+https://www.w3schools.com/html/html5_canvas.asp
