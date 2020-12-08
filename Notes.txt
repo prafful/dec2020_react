@@ -24,5 +24,25 @@ https://www.wufoo.com/html5/
 HTML5 Video Element:
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
 
-HTML5 APi Examples:
+HTML5 New Graphic Elements Examples:
 https://www.w3schools.com/html/html5_canvas.asp
+
+SVG
+
+https://developer.mozilla.org/en-US/docs/Web/SVG
+
+Canvas
+
+https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage
+
+Custom Media Player with HTMl5 and JS
+
+https://www.creativebloq.com/html5/build-custom-html5-video-player-9134473
+https://freshman.tech/custom-html5-video/
+
+https://developer.mozilla.org/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player
+
+
+Browser Support Check
+
+https://caniuse.com/?search=border-radius

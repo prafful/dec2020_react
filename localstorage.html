@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+</head>
+<body onload="initializeValues()">
+    <h1>Todo App:</h1>
+    Todo: 
+    <input type="text" id="todoid">
+    <button onclick="captureTodoValue()">Add</button>
+    <div>
+        <ol>
+            <li>Go to beach!</li>
+            <li>Clear the clutter in the room!</li>
+        </ol>
+    </div>
+
+    <script>
+        var todoref = document.getElementById("todoid")
+        var todoCounter = 0
+
+        function captureTodoValue(){
+            console.log(todoref.value)
+            
+            localStorage.setItem("todo_" + todoCounter, todoref.value)
+            todoCounter++
+            localStorage.counter = todoCounter
+            todoref.value = ""
+        }
+
+        function initializeValues(){
+            if(localStorage.counter == undefined){
+                localStorage.counter = 0
+            }else{
+                todoCounter = localStorage.counter
+            }
+        }
+
+    </script>
+</body>
+</html>

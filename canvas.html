@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Canvas Basic</h1>
+
+    <canvas id="sketchpad" width="400" height="400" style="border: 1px solid red;">
+    </canvas>
+
+    <script>
+        var canvasref = document.getElementById("sketchpad")
+
+        var ctx = canvasref.getContext("2d")
+        ctx.fillStyle = 'green';
+        ctx.fillRect(10, 10, 150, 100);
+
+       
+
+    for (var i = 0; i < 6; i++) {
+        for (var j = 0; j < 6; j++) {
+        ctx.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ', ' +
+                        Math.floor(255 - 42.5 * j) + ', 0)';
+        ctx.fillRect(j * 25, i * 25, 25, 25);
+        }
+    }
+
+
+
+    </script>
+
+</body>
+</html>
