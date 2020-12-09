@@ -1,0 +1,33 @@
+.external{
+    color:purple;
+    background-color: yellow;
+}
+
+.menu{
+    list-style: none;
+}
+
+.menuitem{
+    display: inline;
+    border: 1px solid pink;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+   
+}
+
+
+.menuitem:hover{
+    
+    border: 1px dashed greenyellow;
+    border-radius: 10px;
+    background-color: lightslategrey;
+    transition: all 0.5s ease-in;
+   
+}
+

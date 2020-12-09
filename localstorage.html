@@ -11,7 +11,7 @@
     <input type="text" id="todoid">
     <button onclick="captureTodoValue()">Add</button>
     <div>
-        <ol>
+        <ol id="todocontainer">
             <li>Go to beach!</li>
             <li>Clear the clutter in the room!</li>
         </ol>
@@ -25,6 +25,17 @@
             console.log(todoref.value)
             
             localStorage.setItem("todo_" + todoCounter, todoref.value)
+
+            //create new li element (somewhere in memory, not in DOM)
+            var newli = document.createElement("li")
+            //get todo from localstorage for given i
+            //assign  todoref.value to innerHTML of newli
+            newli.innerHTML = todoref.value + "<button>Done</button>"
+            //get a ref to taskcontainer
+            var container = document.getElementById("todocontainer")
+            container.appendChild(newli)
+
+
             todoCounter++
             localStorage.counter = todoCounter
             todoref.value = ""
@@ -35,6 +46,21 @@
                 localStorage.counter = 0
             }else{
                 todoCounter = localStorage.counter
+                //render all todos from localstorage
+                for(i=0; i<localStorage.counter;i++){
+                    //create new li element (somewhere in memory, not in DOM)
+                    var newli = document.createElement("li")
+                    //get todo from localstorage for given i
+                    var todoTemp = localStorage.getItem("todo_" + i)
+                    console.log(todoTemp)
+                    //assign  todoTemp to innerHTML of newli
+                    newli.innerHTML = todoTemp + "<button>Done</button>"
+                    //get a ref to taskcontainer
+                    var container = document.getElementById("todocontainer")
+                    container.appendChild(newli)
+                }
+                
+                
             }
         }
 
