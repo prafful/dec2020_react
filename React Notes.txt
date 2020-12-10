@@ -38,6 +38,28 @@ Components
 https://en.wikipedia.org/wiki/Web_Components
 https://en.wikipedia.org/wiki/Web_Components
 
+React App Demo (Open Source)
+
+https://startreact.com/themes/sb-admin-react-3/
+https://start-react.github.io/sb-admin-react/#/home
+
+Create hello world in react
+
+https://www.npmjs.com/package/create-react-app
+
+npm install  -g create-react-app
+
+Global Path (-g) => %AppData%\npm
+
+
+create-react-app --version
+4.0.1
+
+
+
+
+
+
 
 
 
