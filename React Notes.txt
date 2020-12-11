@@ -55,6 +55,10 @@ Global Path (-g) => %AppData%\npm
 create-react-app --version
 4.0.1
 
+React Playlist
+
+https://www.youtube.com/playlist?list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3
+
 
 
 
