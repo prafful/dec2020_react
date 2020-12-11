@@ -1,0 +1,19 @@
+{
+  "name": "npm_prj_sample",
+  "version": "1.0.0",
+  "description": "I am fine with no description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "learning",
+    "npm"
+  ],
+  "author": "prafful daga",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "live-server": "^1.2.1"
+  }
+}
