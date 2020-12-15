@@ -6,9 +6,8 @@ import RootComponent from './rootcomponent/root'
 ReactDOM.render(
              <div>
                 <RootComponent></RootComponent>
-                <RootComponent></RootComponent> 
-                <RootComponent></RootComponent>
-                <RootComponent></RootComponent>
+           
             </div>,
             
-            document.getElementById('root'))
+            document.getElementById('root1'))
+
