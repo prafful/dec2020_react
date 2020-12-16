@@ -1,6 +1,7 @@
 import React from 'react'
 import MyContent from '../features/content'
 import MyHeader from '../features/header'
+import Remote from '../features/remote/remote'
 
 
 
@@ -14,6 +15,7 @@ class RootComponent extends React.Component {
                     <h2>Works!</h2>
                     <MyHeader></MyHeader>
                     <MyContent></MyContent>
+                    <Remote></Remote>
                 </div>
           
             </div>
