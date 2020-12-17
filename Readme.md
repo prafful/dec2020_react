@@ -67,6 +67,27 @@ https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopl
 
 https://www.youtube.com/watch?v=t2nDXhXgn9Y
 
+JSON-SERVER
+
+https://www.npmjs.com/package/json-server
+
+
+https://scotch.io/tutorials/json-server-as-a-fake-rest-api-in-frontend-development
+
+
+https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file
+
+https://www.youtube.com/watch?v=1zkgdLZEdwM
+
+
+Generating fake JSON data
+
+https://www.mockaroo.com/
+
+
+
+
+
 
 
 

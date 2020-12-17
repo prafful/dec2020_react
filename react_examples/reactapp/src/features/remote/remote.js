@@ -36,7 +36,7 @@ class Remote extends React.Component {
         return this.state.posts.map(p=>{
             return (
                 <li key={p.id}>
-                    {p.title}
+                    ##{p.title}
                 </li>
             )
         })
