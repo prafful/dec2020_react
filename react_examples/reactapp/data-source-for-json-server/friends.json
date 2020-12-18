@@ -1,46 +1,16 @@
 {
   "friendsapp": [
     {
-      "name": "obbo",
-      "username": "obbouser",
-      "years": 8,
-      "id": 1
-    },
-    {
-      "id": 2,
-      "name": "cas",
-      "username": "casuser",
-      "years": 3
-    },
-    {
-      "name": "orafful",
-      "username": "orafful",
-      "years": "30",
-      "id": 3
-    },
-    {
-      "name": "orafful",
-      "username": "orafful",
-      "years": "30",
-      "id": 4
-    },
-    {
-      "name": "orafful",
-      "username": "orafful",
-      "years": "30",
-      "id": 5
-    },
-    {
-      "name": "orafful",
-      "username": "orafful",
-      "years": "30",
-      "id": 6
-    },
-    {
-      "name": "sad",
-      "username": "das",
+      "name": "prafful",
+      "username": "daga",
       "years": "4",
-      "id": 7
+      "id": 8
+    },
+    {
+      "name": "prafful",
+      "username": "daga",
+      "years": "13",
+      "id": 9
     }
   ],
   "friendslocation": [

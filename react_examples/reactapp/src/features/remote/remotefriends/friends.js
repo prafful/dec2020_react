@@ -11,9 +11,14 @@ class Friends extends React.Component {
         this.state = {
            friends: [],
            displayNewFormStatus: false,
+           displayEditFormStatus:false,
            newName:"",
            newUsername:"",
-           newYears:0
+           newYears:0,
+           editId:0,
+           editName:"",
+           editUsername:"",
+           editYears:0
             
         }
     }
@@ -38,6 +43,39 @@ class Friends extends React.Component {
                 })
     }
 
+    deleteFriendById =(id)=>{
+        console.log("Delete friend by id: " + id)
+        axios.delete("http://localhost:1234/friendsapp" + "/" + id)
+            .then(response=>{
+                console.log(response)
+                this.getRemoteFriends()
+            })
+            .catch(error=>{
+                console.log(error)
+            })
+    }
+
+    editFriendById=(id)=>{
+        console.log("Edit friend by id: " + id)
+        this.setState({
+            displayEditFormStatus: !this.state.displayEditFormStatus
+        })
+        axios.get("http://localhost:1234/friendsapp" + "/" + id)
+            .then(response=>{
+                console.log(response.data)
+                this.setState({
+                    editId: response.data.id,
+                    editName:response.data.name,
+                    editUsername:response.data.username,
+                    editYears:response.data.years
+                })
+
+            })
+            .catch(error=>{
+                console.log(error)
+            })
+    }
+
     renderFriends=()=>{
         return this.state.friends.map(friend=>{
             return(
@@ -46,6 +84,8 @@ class Friends extends React.Component {
                         un={friend.username}
                         nm={friend.name}
                         yr={friend.years}
+                        delId={this.deleteFriendById}
+                        editId={this.editFriendById}
                 ></Friend>
             )
         })
@@ -67,6 +107,7 @@ class Friends extends React.Component {
                     newYears:0,
                     displayNewFormStatus: false
                 })
+                this.getRemoteFriends()
 
 
             })
@@ -77,25 +118,120 @@ class Friends extends React.Component {
 
     }
 
+    updateFriend=(e)=>{
+        e.preventDefault()
+        var editFriend = {
+            "name": this.state.editName,
+            "username": this.state.editUsername,
+            "years": this.state.editYears
+        }
+        axios.put("http://localhost:1234/friendsapp" + "/" + this.state.editId, editFriend)
+        .then(response=>{
+            console.log(response)
+            this.setState({
+                editName:"",
+                editUsername:"",
+                editYears:0,
+                displayEditFormStatus: false,
+                editId:0
+            })
+            this.getRemoteFriends()
+
+
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+    }
+
     captureName=(e)=>{
         console.log(e.target.value)
-        this.setState({
-            newName: e.target.value
-        })
+        if(this.state.displayNewFormStatus){
+            this.setState({
+                newName: e.target.value
+            })
+        }
+        if(this.state.displayEditFormStatus){
+            this.setState({
+                editName: e.target.value
+            })
+        }
+        
     }
 
     captureUsername=(e)=>{
-        console.log(e.target.value)
-        this.setState({
-            newUsername: e.target.value
-        })
+        if(this.state.displayNewFormStatus){
+            console.log(e.target.value)
+            this.setState({
+                newUsername: e.target.value
+            })
+        }
+        if(this.state.displayEditFormStatus){
+            console.log(e.target.value)
+            this.setState({
+                editUsername: e.target.value
+            })
+        }
+        
+       
     }
 
     captureYears=(e)=>{
-        console.log(e.target.value)
-        this.setState({
-            newYears: e.target.value
-        })
+        if(this.state.displayNewFormStatus){
+            console.log(e.target.value)
+            this.setState({
+                newYears: e.target.value
+            })
+        }
+        if(this.state.displayEditFormStatus){
+            console.log(e.target.value)
+            this.setState({
+                editYears: e.target.value
+            })
+        }
+        
+        
+    }
+
+    displayEditForm=()=>{
+        if(this.state.displayEditFormStatus){
+            return (
+                <div>
+                <form>
+                    <input type="text" 
+                            placeholder="id"
+                            value={this.state.editId} 
+                            readOnly>
+                     </input>
+                     <br></br>
+                     <input type="text" 
+                            placeholder="name"
+                            onChange={this.captureName}
+                            value={this.state.editName}>
+                     </input>
+                     <br></br>
+                     <input type="text" 
+                            placeholder="Username"
+                            onChange={this.captureUsername}
+                            value={this.state.editUsername}>
+                     </input>
+                     <br></br>
+                     <input type="number"
+                            placeholder="Years"
+                            onChange={this.captureYears}
+                            value={this.state.editYears}>
+                     </input>
+                     <br></br>
+                  
+                          <button onClick={this.updateFriend}>
+                              Update
+                         </button>
+          
+                
+                </form>
+             </div>
+            )
+        }
     }
 
     displayAddNewForm=()=>{
@@ -119,7 +255,7 @@ class Friends extends React.Component {
                     </input>
                     <br></br>
                     
-                    if({this.state.newName == ""}){
+                    if({this.state.newName === ""}){
                          <button onClick={this.addFriend}
                          disabled={true}>
                              Add
@@ -151,6 +287,7 @@ class Friends extends React.Component {
                 <br></br>
                 <button onClick={this.toggleNewForm}>Add New</button>
                 {this.displayAddNewForm()}
+                {this.displayEditForm()}
                 <br></br>
                 <br></br>
                 <table border="1">
