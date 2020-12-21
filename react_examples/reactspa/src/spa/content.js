@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import About from './about';
 import AddFriend from './addfriend';
 import AllFriends from './allfriends';
+import EditFriend from './editfriend';
 import Home from './home';
 import Service from './service';
 
@@ -18,6 +19,7 @@ class Content extends React.Component {
                 <Route path="/about" component={About}></Route>
                 <Route path="/friends" component={AllFriends}></Route>
                 <Route path="/addfriend" component={AddFriend}></Route>
+                <Route path="/editfriend" component={EditFriend}></Route>
               </Switch>
             </div>
          );

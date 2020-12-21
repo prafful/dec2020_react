@@ -1,0 +1,28 @@
+{
+  "friendsapp": [
+    {
+      "name": "prafful",
+      "username": "daga",
+      "years": "4",
+      "id": 8
+    },
+    {
+      "name": "prafful",
+      "username": "daga",
+      "years": "13",
+      "id": 9
+    }
+  ],
+  "friendslocation": [
+    {
+      "location": "chennai",
+      "friendid": 1,
+      "id": 1
+    },
+    {
+      "location": "ahemdabad",
+      "friendid": 2,
+      "id": 2
+    }
+  ]
+}
