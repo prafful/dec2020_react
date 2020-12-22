@@ -1,5 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import friendClickedAction from '../actions/action-friendclicked';
 
 class FriendList extends React.Component {
    
@@ -11,7 +13,10 @@ class FriendList extends React.Component {
     renderFriends=()=>{
         return this.props.friends.map(friend=>{
             return (
-                <li key={friend.id}>{friend.name}</li>
+                <li key={friend.id}
+                    onClick={()=>this.props.friendClicked(friend)}    >
+                    {friend.name}
+                </li>
             )
         })
     }
@@ -28,13 +33,19 @@ class FriendList extends React.Component {
     }
 }
 
-function convertStoreToPorpsForFriendList(store){
+function convertStoreToPorpsForFriendList(globalstore){
     console.log("Store received in FriendList....")
-    console.log(store)
+    console.log(globalstore)
     return {
-        friends: store.allfriends
+        friends: globalstore.allfriends
     }
 }
 
+function convertEventsToPropsForFriendList(dispath){
+    return bindActionCreators({
+        friendClicked:friendClickedAction
+    }, dispath)
+}
+
  
-export default connect(convertStoreToPorpsForFriendList)(FriendList)
+export default connect(convertStoreToPorpsForFriendList, convertEventsToPropsForFriendList)(FriendList)
