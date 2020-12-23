@@ -19,6 +19,7 @@ class FriendList extends React.Component {
                 </li>
             )
         })
+
     }
 
     render() { 
@@ -33,11 +34,12 @@ class FriendList extends React.Component {
     }
 }
 
-function convertStoreToPorpsForFriendList(globalstore){
+function convertStoreToPropsForFriendList(globalstore){
     console.log("Store received in FriendList....")
     console.log(globalstore)
     return {
         friends: globalstore.allfriends
+       
     }
 }
 
@@ -48,4 +50,4 @@ function convertEventsToPropsForFriendList(dispath){
 }
 
  
-export default connect(convertStoreToPorpsForFriendList, convertEventsToPropsForFriendList)(FriendList)
+export default connect(convertStoreToPropsForFriendList, convertEventsToPropsForFriendList)(FriendList)
